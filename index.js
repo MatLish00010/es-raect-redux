@@ -1,9 +1,16 @@
 function todos(state = [], action) {
-    if (action.type === 'ADD_TODO') {
-        return state.concat([action.todo])
+    switch (action.type) {
+        case 'ADD_TODO' :
+            return state.concat([action.todo])
+        case 'REMOVE_TODO' :
+            return state.filter((todo) => todo.id !== action.id)
+        case 'TOGGLE_TODO' :
+            return state.map((todo) => todo.id !== action.id ? todo :
+                Object.assign({}, todo, {complete: !todo.complete})
+            )
+        default :
+            return state
     }
-
-    return state
 }
 
 function createStore(reducer) {
@@ -31,12 +38,44 @@ function createStore(reducer) {
     }
 }
 
-const store = createStore()
+const store = createStore(todos)
+store.subscribe(() => {
+    console.log('The new state is: ', store.getState())
+})
+
 store.dispatch({
     type: 'ADD_TODO',
     todo: {
         id: 0,
-        name: 'Leadrn Redux',
+        name: 'Learn Redux',
         complete: false,
     }
 })
+
+store.dispatch({
+    type: 'REMOVE_TODO',
+    id: 0,
+})
+
+
+store.dispatch({
+    type: 'TOGGLE_TODO',
+    id: 0,
+})
+
+
+store.dispatch({
+    type: 'ADD_GOAL',
+    goal: {
+        id: 0,
+        name: 'Run a Marathon'
+    }
+})
+
+store.dispatch({
+    type: 'REMOVE_GOAL',
+    id: 0
+})
+
+
+

@@ -22,6 +22,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+  </component>
   <component name="ProjectId" id="1j8nOnBgY7uJUvqlmqM157mKD4i" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -48,6 +51,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603194556396</updated>
       <workItem from="1603194557445" duration="4588000" />
+      <workItem from="1603368911811" duration="3039000" />
     </task>
     <servers />
   </component>
@@ -64,5 +68,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
