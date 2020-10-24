@@ -21,6 +21,10 @@
     <ul id="goals"></ul>
 </div>
 <script type="text/javascript">
+    function generateId() {
+        return Math.random().toString(36).substring(2) + (new Date()).getTime().toString(36);
+    }
+
     function createStore(reducer) {
         let state
         let listeners = []
@@ -127,7 +131,7 @@
         console.log('The new state is: ', store.getState())
     })
 
-    store.dispatch(addTodoAction({
+   /* store.dispatch(addTodoAction({
         id: 0,
         name: 'Learn Redux',
         complete: false,
@@ -148,9 +152,36 @@
         name: 'Run a Marathon'
     }))
 
-    store.dispatch(removeGoalAction(0))
+    store.dispatch(removeGoalAction(0))*/
 
+    // Dom code
+    function addTodo() {
+        const input = document.getElementById('todo')
+        const name = input.value
+        input.value = ''
 
+        store.dispatch(addTodoAction({
+            id: generateId(),
+            name,
+            complete: false,
+        }))
+    }
+
+    function addGoal() {
+        const input = document.getElementById('goal')
+        const name = input.value
+
+        store.dispatch(addGoalAction({
+            id: generateId(),
+            name
+        }))
+    }
+
+    document.getElementById('todoBtn')
+        .addEventListener('click', addTodo)
+
+    document.getElementById('goalBtn')
+        .addEventListener('click', addGoal)
 </script>
 </body>
 </html>
