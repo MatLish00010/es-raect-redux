@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todos and goals</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js'></script>
 </head>
 <body>
 <div>
@@ -118,15 +119,18 @@
         }
     }
 
-    function app(state = {}, action) {
+   /* function app(state = {}, action) {
         return {
             todos: todos(state.todos, action),
             goals: goals(state.goals, action)
         }
-    }
+    }*/
 
 
-    const store = createStore(app)
+    const store = Redux.createStore(Redux.combineReducers({
+        todos,
+        goals,
+    }))
     store.subscribe(() => {
         const {goals, todos} = store.getState()
 
