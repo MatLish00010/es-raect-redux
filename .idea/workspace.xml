@@ -41,6 +41,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -53,6 +54,7 @@
       <updated>1603194556396</updated>
       <workItem from="1603194557445" duration="4588000" />
       <workItem from="1603368911811" duration="4792000" />
+      <workItem from="1603686730029" duration="3565000" />
     </task>
     <servers />
   </component>
@@ -70,5 +72,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="533" y="201" key="SettingsEditor" timestamp="1603686991123">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="533" y="201" key="SettingsEditor/-2560.0.2048.1112/0.0.2048.1112@0.0.2048.1112" timestamp="1603686991123" />
   </component>
 </project>
